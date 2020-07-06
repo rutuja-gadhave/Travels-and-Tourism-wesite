@@ -1,0 +1,130 @@
+
+<html>
+<head>
+<title>Login</title>
+<style>
+
+ 
+
+/* Add styles to the form container */
+.container {
+    position: ;
+    right: 0;
+    margin: 20px;
+    max-width: 400px;
+    padding: 20px;
+    background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #E74C3Cddd ;
+    outline: none;
+}
+
+/* Set a style for the submit button */
+.btn {
+    background-color: #E74C3C;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+</style>
+<script>
+
+function f1()
+{
+	var s1=window.document.forms.fo.fn.value;
+	var re=/^\w+@+gmail*.com/	//regular expression
+	if(re.test(s1)==0)
+	{
+		alert(s1+"  is not a valid email id")
+		
+	}
+	var a=document.getElementById("uid").value;
+		window.document.cookie=a;
+		alert("cookie :"+a)
+
+}
+
+function f2()
+{
+	var s1=window.document.forms.fo.fn.value;
+	var re=/^\w+@+gmail*.com/	//regular expression
+	if(re.test(s1)==0)
+	{
+		alert(s1+"  is not a valid email id")
+		
+	}
+
+}
+function manage(pid)
+ {
+        var bt = document.getElementById('btSubmit');
+
+        if (pid.value != ' ')
+	 {
+           		 bt.disabled = false;
+       	 }
+        else 
+	{
+           		 bt.disabled = true;
+	}
+ } 
+
+function manage1(eid)
+ {
+        var bt = document.getElementById('btSubmit');
+
+        if (eid.value != ' ')
+	 {
+           		 bt.disabled = false;
+       	 }
+        else 
+	{
+           		 bt.disabled = true;
+	}
+ } 
+
+</script>
+</head>
+<body>
+
+
+<div class="bg-img">
+  <form name="fo" class="container" action="tour form.html" method="post">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" name="fn" id="uid" placeholder="Enter Email" name="email" required onchange="f2()"  onclick="manage1(this)"  >
+    <label for="psw" ><b>Password</b></label>
+    <input type="password" name="pass" id="pid"  onkeyup="manage(this)" placeholder="Enter Password" name="psw"   required>
+<input name ="button" id="btSubmit" value="Login" type="submit" class="btn" disabled onclick="f1()" >
+</form>
+</div>
+
+
+<br>
+
+ 
+ 
+
+
+</body>
+</html>
+

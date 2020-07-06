@@ -1,0 +1,90 @@
+<HTML>
+<HEAD><title>Details form</title>
+<SCRIPT language="javascript" type="text/javascript">
+function wel()
+{
+	with(window.document.forms.info)
+	{
+	var f=0;
+	if(firstname.value=="")
+	{
+		f=1;
+		alert("name field cannot be null...!!!!")
+	}
+	if(lastname.value=="")
+	{
+		f=1;
+		alert("surname field cannot be null...!!!!")
+	}
+	if(gender.value=="")
+	{
+		f=1;
+		alert("gender field cannot be null...!!!!")
+	}
+	if(date.value=="")
+	{
+		f=1;
+		alert("date field cannot be null...!!!!")
+	}
+	if(no.value=="")
+	{
+		f=1;
+		{
+			alert("Mobile Number field cannot be null...!!!!")
+		}
+		
+	}
+	else
+	{
+	var str=window.document.forms.info.no.value
+	//var re=/^([\d]{4})?[7-9]\d{9}$/
+	re=/^[7-9]\d{9}$/
+	if(re.test(str)==0)
+	{
+		f=1;
+		alert(str+"  is not a valid mobile number!!!!!")
+	}
+	else
+	{
+		alert(str+ "  is valid no")
+		
+		
+	}
+	}
+	if(address.value=="")
+	{
+		f=1;
+		alert("address field cannot be null...!!!!")
+	}
+	if(f==0)
+	{
+	alert("WELCOME "+window.document.forms.info.firstname.value)
+	window.open("acc.html","trt","height=900,width=1350")
+	
+	}
+	else
+	{
+	alert("please fill the form correctly")
+	
+	}
+	}
+	
+}
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="" ALIGN="center">
+<CENTER><H1><U>......PERSONAL DETAILS.....</U></H1></CENTER><br><TABLE><TD>
+<FORM ACTION="acc.html"  NAME="info">
+<BR><H3>
+FIRST NAME: <INPUT TYPE="text" NAME="firstname" placeholder="First Name"><br><br>
+LAST NAME:  <INPUT TYPE="text" NAME="lastname" placeholder="Last Name"><br><br>
+GENDER : <BR><INPUT TYPE="radio" NAME="gender">MALE  
+<INPUT TYPE="radio" NAME="gender">FEMALE<br><br>
+Birth Date:<br><INPUT TYPE="date" NAME="date"></CENTER><br><br>
+Mobile Number:<br><textarea maxlength=30" cols="30" rows="3" NAME="no"placeholder="Mobile Number"></textarea><br><br>
+Address:<br><textarea maxlength=30" cols="30" rows="3" NAME="address"placeholder="Address"></textarea><br><br>
+<input type="button" value="submit" onclick="wel()"  ></a>
+<INPUT TYPE="RESET" NAME="reset"></H3></FORM></TD>
+<TD><img src="images/img5.jpg" height="500" width="400" onmouseover ="src='images/img4.jpg' " onmouseout="src='images/img5.jpg' "></TD></TR>
+</BODY>
+</HTML>

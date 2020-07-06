@@ -1,0 +1,127 @@
+<html>
+<head><title>tour and account details</title>
+<script language="javascript" type="text/javascript">
+function change()
+{
+	with(window.document.forms.form1)
+	{
+
+	var f=0;
+	if(acno.value=="")
+	{
+		f=1;
+		alert("name field cannot be null...!!!!")
+	}
+	else
+	{
+		window.open("thank.html","hi","height=900, width=900");
+	}
+	}
+}
+function changc(a)
+{
+	with(window.document.forms.form1)
+	{
+		
+		if(a==1)
+		{
+			course[0].text="70,000 Rs."
+			course[0].value="11"
+			course[1].text="80,000 Rs."
+			course[1].value="12"
+		}
+		else if(a==2)
+		{
+			course[0].text="1 Lakh"
+			course[0].value="21"
+			course[1].text="1.5 Lakh"
+			course[1].value="22"
+		}
+		else if(a==3)
+		{
+			course[0].text="7 Lakh"
+			course[0].value="31"
+			course[1].text="8 Lakh "
+			course[1].value="32"
+		}
+		else if(a==4)
+		{
+			course[0].text="15 Lakh"
+			course[0].value="31"
+			course[1].text="17 Lakh "
+			course[1].value="32"
+		}
+		else if(a==5)
+		{
+			course[0].text="20 Lakh"
+			course[0].value="31"
+			course[1].text="21 Lakh "
+			course[1].value="32"
+		}
+		
+	}
+}
+</script>
+</head>
+ <body>
+<CENTER><H1><U>......TOUR AND ACCOUNT DETAILS.....</U></H1></CENTER><br>
+<br>
+<TABLE><TR><TD>
+<form name="form1">
+<b>Days:</b><br><input type="radio" name="Days" value="1" checked onclick="changc(this.value)">2 Days<br>
+<input type="radio" name="Days" value="2"  onclick="changc(this.value)" >3 Days<br>
+<input type="radio" name="Days" value="3" onclick="changc(this.value)">5 Days<br>
+<input type="radio" name="Days" value="4" onclick="changc(this.value)">7 Days<br>
+<input type="radio" name="Days" value="5" onclick="changc(this.value)">15 Days<br>
+
+The fees of holidays are as per days you have chosen........<br><br>
+Holiday Fees :<select name ="course">
+<option value="11" text="70,000 Rs.">70,000 Rs.</option><br>
+<option value="12" text="70,000 Rs.">80,000 Rs.</option><br>
+</select><br><br>
+The second fees of holidays is for Luggerious service.........
+Choose fees that you are affordable.........<br><br>
+<b>Bank Name :</b><select>
+<option>Bank Of Maharashtra</option>
+<option>Canara Bank</option>
+<option>HDFC Bank</option>
+<option>ICICI Bank</option>
+<option>State Bank</option>
+<option>Janseva Bank</option>
+</select>
+
+<b>Branch Name :</b><select>
+<option>Pune</option>
+<option>Mumbai</option>
+<option>Delhi</option>
+<option>Kolkatata</option>
+<option>Chennai</option>
+<option>Singapore</option>
+<option>Ahalabad</option>
+</select><br><br>
+<b>Account type:</b><select>
+<option> Personal </option>
+<option> Join </option>
+</select><br><br>
+<b>Account no:</b><input type="text" name="acno" placeholder="Account No">
+<br><br><br>
+<h3 onmouseover="style.color='red' ">Click on 'Done' to book your holidays</h3><br>
+</body>
+<HEAD>
+<SCRIPT LANGUAGE="javascript"  TYPE="text/javascript">
+function popup(url)
+{
+var mywin=window.open(url,"pop","height=900,width=900,resizable=0,left=400,top=400");
+this.window.close()
+//mywin.opener.close()
+}
+</SCRIPT></HEAD>
+<BODY><form>
+<input type="button" value="Done" name="pop" onclick="change()"><br>
+</form><TD>
+<img src="images/img7.jpg" height="600" width="500" onmouseover ="src='images/img6.jpg' " onmouseout="src='images/img7.jpg' ">
+</TD></TR></form>
+</body>
+</html>
+
+
